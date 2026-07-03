@@ -1,0 +1,485 @@
+[
+  {
+    "model": "core.profile",
+    "pk": 1,
+    "fields": {
+      "name": "Md. Mehedi Hasan",
+      "title": "AI & ML Researcher · NASA International Space Apps Champion 2025 · IEEE Member",
+      "tagline": "Building interpretable machine learning systems at the intersection of behavioral modeling, social engineering detection, and socio-technical resilience.",
+      "about_quote": "I work at the intersection of <em>AI, behavioral modeling,</em> and socio-technical resilience building systems that are not only accurate but <em>explainable</em> and grounded in human reality.",
+      "about_body_1": "I'm a BSc Computer Science & Engineering student at <strong style=\"color:var(--text-1)\">Dhaka International University</strong> (CGPA 3.76 / 4.00), graduating December 2027. My research focuses on detecting social engineering through interpretable behavioral anomaly modeling, predicting system failures using socio-economic and IoT data, and building continual learning frameworks for dynamic environments.",
+      "about_body_2": "As <strong style=\"color:var(--text-1)\">President of DIU Computer Programming Club</strong> and an active IEEE & IEEE Computer Society Member, I combine research depth with community leadership championed by a NASA Space Apps 2025 victory with Team Polaris.",
+      "email": "meetmehedi1@gmail.com",
+      "linkedin_url": "https://www.linkedin.com/in/meetmehedi",
+      "github_url": "https://github.com/meetmehedi",
+      "orcid_url": "https://orcid.org/0009-0006-1427-8769",
+      "facebook_url": "https://www.facebook.com/meetmehedi1/",
+      "twitter_handle": "@meetmehedi",
+      "canonical_url": "https://www.mdmehedihasan.us/",
+      "cgpa": "3.76",
+      "papers_count": "8+",
+      "edu_current_institution": "Dhaka International University",
+      "edu_degree": "B.Sc. Computer Science & Engineering",
+      "edu_period": "Sep 2023 – Dec 2027",
+      "edu_hsc_institution": "BAF Shaheen College Jashore",
+      "edu_hsc_degree": "Higher Secondary Certificate (HSC)",
+      "edu_hsc_period": "Sep 2020 – Dec 2022",
+      "edu_hsc_gpa": "4.75 / 5.00",
+      "research_tags": "Behavioral ML,Social Engineering Detection,Interpretable AI,Socio-Economic Modeling,Continual Learning,Geospatial Risk,Computer Vision,LLMs & GenAI",
+      "availability_text": "Open for Research Collaborations",
+      "contact_headline": "Let's Shape\nthe Future",
+      "contact_sub": "Open for research collaborations, engineering challenges, or just a friendly conversation about AI and its impact on humanity."
+    }
+  },
+  {
+    "model": "core.impactstat",
+    "pk": 1,
+    "fields": { "label": "CGPA / 4.00", "value": "3.76", "is_accent": true, "data_count": "3.76", "is_decimal": true, "custom_font_size": "", "order": 1 }
+  },
+  {
+    "model": "core.impactstat",
+    "pk": 2,
+    "fields": { "label": "Accepted Papers", "value": "8+", "is_accent": false, "data_count": "8", "is_decimal": false, "custom_font_size": "", "order": 2 }
+  },
+  {
+    "model": "core.impactstat",
+    "pk": 3,
+    "fields": { "label": "Int'l Champion 2025", "value": "🏆 NASA", "is_accent": false, "data_count": "", "is_decimal": false, "custom_font_size": "clamp(32px,5vw,48px)", "order": 3 }
+  },
+  {
+    "model": "core.publication",
+    "pk": 1,
+    "fields": {
+      "title": "A Socio-Economic Machine Learning Framework for Predicting Programmer Retention",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Rakib, R., Molla, M. A., Borhan, R., Based, M. A.",
+      "venue": "BIM 2025 · Taylor & Francis", "year": 2025, "status": "accepted",
+      "display_index": "01", "bibtex_key": "hasan2025socio", "order": 1,
+      "bibtex_entry": "@inproceedings{hasan2025socio,\n  title={A Socio-Economic Machine Learning Framework for Predicting Programmer Retention},\n  author={Hasan, M. M. and Rakib, R. and Molla, M. A. and Borhan, R. and Based, M. A.},\n  booktitle={3rd International Conference on Big Data, IoT and Machine Learning (BIM 2025)},\n  year={2025}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 2,
+    "fields": {
+      "title": "Fraud Detection with DistilBERT: A Transformer-Based Approach to Behavioral Banking Sequences",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Mahin, A. A., Chakraborty, S., Afrose, M., Mia, M. A., Based, M. A.",
+      "venue": "BIM 2025 · Taylor & Francis", "year": 2025, "status": "accepted",
+      "display_index": "02", "bibtex_key": "hasan2025fraud", "order": 2,
+      "bibtex_entry": "@inproceedings{hasan2025fraud,\n  title={Fraud Detection with DistilBERT A Transformer-Based Approach to Behavioral Banking Sequences},\n  author={Hasan, M. M. and Mahin, A. A. and Chakraborty, S. and Afrose, M. and Mia, M. A. and Based, M. A.},\n  booktitle={3rd International Conference on Big Data, IoT and Machine Learning (BIM 2025)},\n  year={2025}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 3,
+    "fields": {
+      "title": "MEWC-RL++: A Modular and Adaptive Continual Reinforcement Learning Framework for Automation Systems",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Mahin, A. A., Afrose, M., Based, M. A.",
+      "venue": "ECCT 2026 · Taylor & Francis", "year": 2026, "status": "accepted",
+      "display_index": "03", "bibtex_key": "hasan2026mewc", "order": 3,
+      "bibtex_entry": "@inproceedings{hasan2026mewc,\n  title={MEWC-RL++: A Modular and Adaptive Continual Reinforcement Learning Framework for Automation Systems},\n  author={Hasan, M. M. and Mahin, A. A. and Afrose, M. and Based, M. A.},\n  booktitle={International Conference on Electrical, Computer and Communication Technologies (ECCT 2026)},\n  year={2026}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 4,
+    "fields": {
+      "title": "Impact of Social Media Usage on Academic Performance: A Hybrid Machine Learning and SEM Approach",
+      "authors": "Mrida, M. A. R., <span class=\"me\">Hasan, M. M.</span>, Ausaf, S. M. N., Ray, P. C., Based, M. A.",
+      "venue": "ECCT 2026 · Taylor & Francis", "year": 2026, "status": "accepted",
+      "display_index": "04", "bibtex_key": "mrida2026impact", "order": 4,
+      "bibtex_entry": "@inproceedings{mrida2026impact,\n  title={Impact of Social Media Usage on Academic Performance: A Hybrid Machine Learning and SEM Approach},\n  author={Mrida, M. A. R. and Hasan, M. M. and Ausaf, S. M. N. and Ray, P. C. and Based, M. A.},\n  booktitle={International Conference on Electrical, Computer and Communication Technologies (ECCT 2026)},\n  year={2026}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 5,
+    "fields": {
+      "title": "Lightweight Deep Learning for Urban Traffic Intelligence: A MobileNetV2-YOLOv8 Pipeline with Adaptive Resolution Processing",
+      "authors": "Biswas, S., <span class=\"me\">Hasan, M. M.</span>, Rakib, R., Mahin, A. A., Afrose, M., Based, M. A.",
+      "venue": "ECCT 2026 · ACSR, Springer Nature", "year": 2026, "status": "accepted",
+      "display_index": "05", "bibtex_key": "biswas2026lightweight", "order": 5,
+      "bibtex_entry": "@inproceedings{biswas2026lightweight,\n  title={Lightweight Deep Learning for Urban Traffic Intelligence: A MobileNetV2-YOLOv8 Pipeline with Adaptive Resolution Processing},\n  author={Biswas, S. and Hasan, M. M. and Rakib, R. and Mahin, A. A. and Afrose, M. and Based, M. A.},\n  booktitle={International Conference on Electrical, Computer and Communication Technologies (ECCT 2026)},\n  year={2026}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 6,
+    "fields": {
+      "title": "Federated and Explainable Machine Learning Framework for Cyber Attack Detection in Smart Grids",
+      "authors": "Asif, M., <span class=\"me\">Hasan, M. M.</span>, Based, M. A.",
+      "venue": "ECCT 2026 · Taylor & Francis", "year": 2026, "status": "accepted",
+      "display_index": "06", "bibtex_key": "asif2026federated", "order": 6,
+      "bibtex_entry": "@inproceedings{asif2026federated,\n  title={Federated and Explainable Machine Learning Framework for Cyber Attack Detection in Smart Grids},\n  author={Asif, M. and Hasan, M. M. and Based, M. A.},\n  booktitle={International Conference on Electrical, Computer and Communication Technologies (ECCT 2026)},\n  year={2026}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 7,
+    "fields": {
+      "title": "Student-YOLOv8: A YOLO-Based Deep Learning Approach for Real-Time Student Detection and Face Recognition in Classroom Attendance Monitoring Systems",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Hossain, M. A., Mahin, A. A., Khatun, F.",
+      "venue": "EFAST 2026", "year": 2026, "status": "accepted",
+      "display_index": "07", "bibtex_key": "hasan2026student", "order": 7,
+      "bibtex_entry": "@inproceedings{hasan2026student,\n  title={Student-YOLOv8: A YOLO-Based Deep Learning Approach for Real-Time Student Detection and Face Recognition in Classroom Attendance Monitoring Systems},\n  author={Hasan, M. M. and Hossain, M. A. and Mahin, A. A. and Khatun, F.},\n  booktitle={International Conference on Emerging Frontiers in Advanced Sciences and Technologies (EFAST 2026)},\n  year={2026}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 8,
+    "fields": {
+      "title": "Cross-Cultural Early Detection of Suicidal Ideation in Adolescents: An Ensemble Machine Learning Approach Using GSHS Data",
+      "authors": "Rion, A. M., Pallob, M. M. I., Rakib, R., Molla, M. A., <span class=\"me\">Hasan, M. M.</span>",
+      "venue": "TENCON 2026", "year": 2026, "status": "accepted",
+      "display_index": "08", "bibtex_key": "rion2026suicidal", "order": 8,
+      "bibtex_entry": "@inproceedings{rion2026suicidal,\n  title={Cross-Cultural Early Detection of Suicidal Ideation in Adolescents: An Ensemble Machine Learning Approach Using GSHS Data},\n  author={Rion, A. M. and Pallob, M. M. I. and Rakib, R. and Molla, M. A. and Hasan, M. M.},\n  booktitle={IEEE TENCON 2026},\n  year={2026}\n}"
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 9,
+    "fields": {
+      "title": "Digital Transformation for Sustainable Universities: Modeling the Convergence of MIS, IoT, and Governance",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Pallob, M. M. I., Based, M. A.",
+      "venue": "Journal", "year": null, "status": "review",
+      "display_index": "R1", "bibtex_key": "", "order": 1, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 10,
+    "fields": {
+      "title": "War, Media Bias, and Socio-Economic Consequences: A Centennial Analysis of the Narrative-Reality Index (1914–2026)",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Mahin, A. A., Afrose, M., Based, M. A.",
+      "venue": "Journal", "year": null, "status": "review",
+      "display_index": "R2", "bibtex_key": "", "order": 2, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 11,
+    "fields": {
+      "title": "A Hybrid Explainable Machine Learning Framework for Customer Lifetime Value Prediction and Its Socio-Economic Implications",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Rahman, M. M., Mrida, M. A. R., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R3", "bibtex_key": "", "order": 3, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 12,
+    "fields": {
+      "title": "A Relational Database-Driven Real-Time Cryptocurrency Portfolio Management System with Automated ETL Integration",
+      "authors": "Rakib, R., <span class=\"me\">Hasan, M. M.</span>, Molla, M. A., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R4", "bibtex_key": "", "order": 4, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 13,
+    "fields": {
+      "title": "SafeRoads: AI-Driven Proactive Risk Synthesis and Data-Centric Infrastructure Audits for Road Safety",
+      "authors": "Rahman, M. M., <span class=\"me\">Hasan, M. M.</span>, Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R5", "bibtex_key": "", "order": 5, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 14,
+    "fields": {
+      "title": "Machine Learning based Regression and Classification of Earthquake Magnitude using USGS Seismic Records",
+      "authors": "Molla, M. A., Rakib, R., <span class=\"me\">Hasan, M. M.</span>, Rion, A. M., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R6", "bibtex_key": "", "order": 6, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 15,
+    "fields": {
+      "title": "Urban–Rural Inequality in Tech Career Intention: A Machine Learning Perspective",
+      "authors": "Molla, M. A., <span class=\"me\">Hasan, M. M.</span>, Rakib, R., Borhan, R., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R7", "bibtex_key": "", "order": 7, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 16,
+    "fields": {
+      "title": "Socio-Economic Determinants of Programming Skill Development in Undergraduate CS Students",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Molla, M. A., Rakib, R., Borhan, R., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R8", "bibtex_key": "", "order": 8, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 17,
+    "fields": {
+      "title": "Explainable AI for Understanding Motivation in Choosing Computer Science Careers",
+      "authors": "Rakib, R., Molla, M. A., <span class=\"me\">Hasan, M. M.</span>, Borhan, R., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R9", "bibtex_key": "", "order": 9, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 18,
+    "fields": {
+      "title": "Fairness-Aware HIV Risk Prediction in Bangladesh Using Behavioral and Explainable AI",
+      "authors": "Afrose, M., <span class=\"me\">Hasan, M. M.</span>, Mahin, A. A., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R10", "bibtex_key": "", "order": 10, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 19,
+    "fields": {
+      "title": "A Modular Framework for Continual Reinforcement Learning in Dynamic Robotic Environments",
+      "authors": "Mahin, A. A., <span class=\"me\">Hasan, M. M.</span>, Rakib, R., Molla, M. A., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R11", "bibtex_key": "", "order": 11, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 20,
+    "fields": {
+      "title": "Interpretable Machine Learning for Depression Risk Classification Among Bangladeshi University Students",
+      "authors": "Mahin, A. A., <span class=\"me\">Hasan, M. M.</span>, Afrose, M., Mia, M. A., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R12", "bibtex_key": "", "order": 12, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 21,
+    "fields": {
+      "title": "Women's Psychology and Its Socioeconomic Impact on Male Partners and Relationships",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Rakib, R., Molla, M. A., Based, M. A.",
+      "venue": "", "year": null, "status": "ongoing",
+      "display_index": "O1", "bibtex_key": "", "order": 1, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 22,
+    "fields": {
+      "title": "THE DUAL PARADOX: AI Investment and Workforce Displacement in Global Corporations",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Molla, M. A., Rakib, R., Based, M. A.",
+      "venue": "", "year": null, "status": "ongoing",
+      "display_index": "O2", "bibtex_key": "", "order": 2, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 23,
+    "fields": {
+      "title": "MEWC-LLM: Memory-Efficient Weight Consolidation for Large Language Models",
+      "authors": "Afrose, M., <span class=\"me\">Hasan, M. M.</span>, Based, M. A.",
+      "venue": "", "year": null, "status": "ongoing",
+      "display_index": "O3", "bibtex_key": "", "order": 3, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 1,
+    "fields": { "title": "The AI Researcher's Handbook", "description": "A comprehensive guide for AI/ML researchers covering research methodology, paper writing, experimentation design, and navigating the academic publication process. Available on ResearchGate.", "url": "https://www.researchgate.net/publication/407049194_The_AI_Researcher%27s_Handbook", "icon_emoji": "", "badge_type": "research", "badge_label": "📖 Handbook", "tags": "ResearchGate,Open Access,Methodology", "layout": "handbook", "order": 1 }
+  },
+  {
+    "model": "core.project",
+    "pk": 2,
+    "fields": { "title": "MeteorShield", "description": "NASA NEO data platform with real-time 3D visualization. Champion, NASA International Space Apps Challenge 2025 - Barisal Division & Global Honorable Mention with Team Polaris.", "url": "https://github.com/meetmehedi/meteor-madness", "icon_emoji": "🌍", "badge_type": "nasa", "badge_label": "🏆 NASA Winner", "tags": "NASA API,Three.js,Machine Learning,3D Visualization", "layout": "featured", "order": 2 }
+  },
+  {
+    "model": "core.project",
+    "pk": 3,
+    "fields": { "title": "SocialAI", "description": "Distributed, scalable platform integrating LLM agents and resilient proxy routing for automated content generation.", "url": "https://github.com/meetmehedi/For-final-deploy-bot-version-2.0", "icon_emoji": "🤖", "badge_type": "none", "badge_label": "", "tags": "LLMs,Python,Automation", "layout": "normal", "order": 3 }
+  },
+  {
+    "model": "core.project",
+    "pk": 4,
+    "fields": { "title": "SaveFood", "description": "XGBoost model trained on IoT time-series data to predict food spoilage (F1: 0.89). Dashboard visualizes waste reduction impact.", "url": "https://github.com/meetmehedi/SaveFood", "icon_emoji": "🍃", "badge_type": "none", "badge_label": "", "tags": "XGBoost,IoT", "layout": "normal", "order": 4 }
+  },
+  {
+    "model": "core.project",
+    "pk": 5,
+    "fields": { "title": "DevBurn", "description": "TypeScript full-stack engine analyzing developer workflows, integrating GitHub services with burnout tracking algorithms.", "url": "https://github.com/meetmehedi/DevBurn", "icon_emoji": "⚡", "badge_type": "none", "badge_label": "", "tags": "TypeScript,Analytics", "layout": "normal", "order": 5 }
+  },
+  {
+    "model": "core.project",
+    "pk": 6,
+    "fields": { "title": "SafeRoads", "description": "ML model identifying high-risk urban segments using traffic patterns and accident history (Precision: 84%).", "url": "https://github.com/meetmehedi/SafeRoads", "icon_emoji": "🛣️", "badge_type": "none", "badge_label": "", "tags": "Geospatial ML,Ensemble", "layout": "normal", "order": 6 }
+  },
+  {
+    "model": "core.project",
+    "pk": 7,
+    "fields": { "title": "STSPF", "description": "Hierarchical Temporal-Spatial Pattern Fusion model for advanced data analysis and forecasting in dynamic environments.", "url": "https://github.com/meetmehedi/STSPF-Hierarchical-Temporal-Spatial-Pattern-Fusion", "icon_emoji": "📡", "badge_type": "none", "badge_label": "", "tags": "Deep Learning,Spatial-Temporal", "layout": "normal", "order": 7 }
+  },
+  {
+    "model": "core.project",
+    "pk": 8,
+    "fields": { "title": "AI Learning Platform", "description": "AI-powered supplementary educational platform enhancing university coursework with intelligent assistance and interactive tracking.", "url": "https://github.com/meetmehedi/AI-Powered-Supplementary-Learning-Platform-for-University-Courses", "icon_emoji": "🧠", "badge_type": "none", "badge_label": "", "tags": "TypeScript,EdTech,AI", "layout": "normal", "order": 8 }
+  },
+  {
+    "model": "core.project",
+    "pk": 9,
+    "fields": { "title": "CryptoTracker", "description": "Real-time cryptocurrency portfolio management application for tracking live market data and analyzing asset performance.", "url": "https://github.com/meetmehedi/CryptoTracker", "icon_emoji": "₿", "badge_type": "none", "badge_label": "", "tags": "Web,API,Finance", "layout": "normal", "order": 9 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 1,
+    "fields": { "name": "Python", "is_highlighted": true, "row": 1, "order": 1 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 2,
+    "fields": { "name": "TensorFlow", "is_highlighted": false, "row": 1, "order": 2 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 3,
+    "fields": { "name": "PyTorch", "is_highlighted": true, "row": 1, "order": 3 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 4,
+    "fields": { "name": "Scikit-learn", "is_highlighted": false, "row": 1, "order": 4 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 5,
+    "fields": { "name": "XGBoost", "is_highlighted": true, "row": 1, "order": 5 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 6,
+    "fields": { "name": "Pandas", "is_highlighted": false, "row": 1, "order": 6 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 7,
+    "fields": { "name": "NumPy", "is_highlighted": false, "row": 1, "order": 7 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 8,
+    "fields": { "name": "Computer Vision", "is_highlighted": true, "row": 1, "order": 8 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 9,
+    "fields": { "name": "YOLOv8", "is_highlighted": false, "row": 1, "order": 9 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 10,
+    "fields": { "name": "OpenCV", "is_highlighted": false, "row": 1, "order": 10 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 11,
+    "fields": { "name": "LLMs / GenAI", "is_highlighted": true, "row": 1, "order": 11 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 12,
+    "fields": { "name": "Auto-sklearn", "is_highlighted": false, "row": 1, "order": 12 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 13,
+    "fields": { "name": "Matplotlib", "is_highlighted": false, "row": 2, "order": 1 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 14,
+    "fields": { "name": "Behavioral ML", "is_highlighted": true, "row": 2, "order": 2 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 15,
+    "fields": { "name": "Seaborn", "is_highlighted": false, "row": 2, "order": 3 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 16,
+    "fields": { "name": "Interpretable AI", "is_highlighted": true, "row": 2, "order": 4 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 17,
+    "fields": { "name": "Java", "is_highlighted": false, "row": 2, "order": 5 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 18,
+    "fields": { "name": "C", "is_highlighted": false, "row": 2, "order": 6 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 19,
+    "fields": { "name": "SQL", "is_highlighted": true, "row": 2, "order": 7 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 20,
+    "fields": { "name": "Git & GitHub", "is_highlighted": false, "row": 2, "order": 8 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 21,
+    "fields": { "name": "Selenium", "is_highlighted": true, "row": 2, "order": 9 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 22,
+    "fields": { "name": "TypeScript", "is_highlighted": false, "row": 2, "order": 10 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 23,
+    "fields": { "name": "Geospatial ML", "is_highlighted": true, "row": 2, "order": 11 }
+  },
+  {
+    "model": "core.skill",
+    "pk": 24,
+    "fields": { "name": "Proxy Engineering", "is_highlighted": false, "row": 2, "order": 12 }
+  },
+  {
+    "model": "core.leadershiprole",
+    "pk": 1,
+    "fields": { "role": "President", "organization": "DIU Computer Programming Club · 2026–27", "is_current": true, "order": 1 }
+  },
+  {
+    "model": "core.leadershiprole",
+    "pk": 2,
+    "fields": { "role": "General Secretary", "organization": "DIU CSE Speakers Club · 2025–26", "is_current": false, "order": 2 }
+  },
+  {
+    "model": "core.leadershiprole",
+    "pk": 3,
+    "fields": { "role": "Executive Member", "organization": "BASIS Students' Forum (DIU)", "is_current": false, "order": 3 }
+  },
+  {
+    "model": "core.leadershiprole",
+    "pk": 4,
+    "fields": { "role": "Student Member", "organization": "IEEE & IEEE Computer Society", "is_current": false, "order": 4 }
+  },
+  {
+    "model": "core.award",
+    "pk": 1,
+    "fields": {
+      "eyebrow": "NASA International Space Apps Challenge 2025",
+      "title": "Global Nominee & Honorable Mention · Barisal Champion",
+      "description": "Led Team Polaris to victory at the Barisal Division championship. Combined expertise in Machine Learning, full-stack development, data analysis, and UI/UX to engineer a winning planetary defense solution — MeteorShield.",
+      "icon_emoji": "🏆",
+      "tags": "Machine Learning,3D Visualization,NASA API,Team Polaris",
+      "is_featured": true,
+      "order": 1
+    }
+  }
+]

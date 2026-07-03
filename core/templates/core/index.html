@@ -1,0 +1,436 @@
+{% load static %}<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- ── Primary SEO ── -->
+  <title>{{ profile.name }} — AI &amp; ML Researcher | NASA Space Apps Champion 2025</title>
+  <meta name="description"
+    content="{{ profile.name }} is an AI &amp; ML Researcher at Dhaka International University, specialising in behavioral modeling, social engineering detection, and interpretable machine learning. NASA International Space Apps Champion 2025, IEEE Member, and author of 8+ accepted papers." />
+  <meta name="keywords"
+    content="Md Mehedi Hasan, AI Researcher, ML Researcher, Machine Learning, Behavioral Modeling, Social Engineering Detection, Interpretable AI, NASA Space Apps Champion, IEEE Member, Dhaka International University, Python, TensorFlow, PyTorch, NLP, Computer Vision" />
+  <meta name="author" content="{{ profile.name }}" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="{{ profile.canonical_url }}" />
+  <link rel="icon" href="{% static 'favicon.ico' %}" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32.png' %}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16.png' %}" />
+  <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:site_name" content="{{ profile.name }}" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="{{ profile.name }} — AI &amp; ML Researcher | NASA Space Apps Champion 2025" />
+  <meta property="og:description"
+    content="AI &amp; ML Researcher specialising in behavioral modeling, social engineering detection &amp; interpretable ML. NASA International Space Apps Champion 2025 · IEEE Member · 8+ accepted papers." />
+  <meta property="og:url" content="{{ profile.canonical_url }}" />
+  <meta property="og:image" content="{{ profile.canonical_url }}static/images/mee.jpg" />
+
+  <!-- ── Twitter Card ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="{{ profile.twitter_handle }}" />
+  <meta name="twitter:creator" content="{{ profile.twitter_handle }}" />
+  <meta name="twitter:title" content="{{ profile.name }} — AI &amp; ML Researcher" />
+  <meta name="twitter:description"
+    content="AI &amp; ML Researcher · NASA International Space Apps Champion 2025 · IEEE Member · 8+ accepted papers." />
+
+  <!-- ── JSON-LD Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ profile.name }}",
+    "url": "{{ profile.canonical_url }}",
+    "image": "{{ profile.canonical_url }}static/images/mee.jpg",
+    "jobTitle": "AI & ML Researcher",
+    "email": "{{ profile.email }}",
+    "sameAs": [
+      "{{ profile.linkedin_url }}",
+      "{{ profile.github_url }}",
+      "{{ profile.orcid_url }}",
+      "{{ profile.facebook_url }}"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+</head>
+
+<body>
+  <!-- Progress Bar -->
+  <div id="progress-bar" role="progressbar" aria-label="Scroll progress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Particle Background -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ══ NAVIGATION ══ -->
+  <nav id="nav" aria-label="Main navigation">
+    <div class="nav-pill">
+      <span class="desktop-links" style="display:flex;gap:4px;align-items:center;">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#publications" class="nav-link">Research</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#leadership" class="nav-link">Awards</a>
+        <a href="#contact" class="nav-link" style="color:var(--accent-light);">Contact</a>
+      </span>
+      <button class="nav-menu-btn" id="menuToggle" aria-label="Toggle navigation">☰ Menu</button>
+    </div>
+  </nav>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero">
+    <div class="hero-badge">
+      <span class="dot" aria-hidden="true"></span>
+      {{ profile.availability_text }}
+    </div>
+
+    <h1 class="hero-name"><span>{{ profile.name }}</span></h1>
+
+    <p class="hero-sub">{{ profile.title }}</p>
+    <p class="hero-tagline">{{ profile.tagline }}</p>
+
+    <div class="hero-buttons">
+      <a href="#publications" class="btn-primary" id="hero-research-btn">View Research ↗</a>
+      <a href="{% static 'Md_Mehedi_Hasan_CV.pdf' %}" download class="btn-secondary" id="hero-cv-btn">↓ Download CV</a>
+      <a href="{{ profile.orcid_url }}" target="_blank" rel="noopener" class="btn-secondary"
+        id="hero-orcid-btn" aria-label="ORCID profile">ORCID ↗</a>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-glow" aria-hidden="true"></div>
+      <img src="{% static 'images/mee.jpg' %}" alt="{{ profile.name }} — AI Researcher" class="hero-photo" loading="eager" />
+    </div>
+  </section>
+
+  <!-- ══ IMPACT BAR ══ -->
+  <section id="impact" aria-label="Key achievements">
+    <div class="container">
+      <div class="impact-grid">
+        {% for stat in impact_stats %}
+        <div class="impact-item reveal {% if not forloop.first %}reveal-delay-{{ forloop.counter0 }}{% endif %}">
+          <span class="impact-number {% if stat.is_accent %}accent{% endif %}"
+            {% if stat.data_count %}data-count="{{ stat.data_count }}"{% endif %}
+            {% if stat.is_decimal %}data-decimal{% endif %}
+            {% if stat.custom_font_size %}style="font-size:{{ stat.custom_font_size }}"{% endif %}>
+            {{ stat.value }}
+          </span>
+          <span class="impact-label">{{ stat.label }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left: text -->
+        <div>
+          <div class="section-header reveal">
+            <span class="section-eyebrow">Who I Am</span>
+            <h2 class="section-title">Turning Behavior<br>Into Intelligence</h2>
+          </div>
+
+          <p class="about-quote reveal reveal-delay-1">
+            {{ profile.about_quote|safe }}
+          </p>
+
+          <p class="about-body reveal reveal-delay-2">{{ profile.about_body_1 }}</p>
+          <p class="about-body reveal reveal-delay-2">{{ profile.about_body_2 }}</p>
+
+          <div class="about-tags reveal reveal-delay-3">
+            {% for tag in profile.get_research_tags_list %}
+            <span class="tag {% if forloop.counter <= 3 %}accent-tag{% endif %}">{{ tag }}</span>
+            {% endfor %}
+          </div>
+
+          <!-- Education -->
+          <div style="margin-top:48px;" class="reveal">
+            <div style="font-size:11px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:16px;">Education</div>
+            <div class="edu-item">
+              <div class="edu-dot"></div>
+              <div>
+                <div class="edu-title">{{ profile.edu_current_institution }}</div>
+                <div class="edu-sub">{{ profile.edu_degree }}</div>
+                <div class="edu-date">{{ profile.edu_period }} · CGPA {{ profile.cgpa }} / 4.00</div>
+              </div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-dot" style="background:var(--text-3)"></div>
+              <div>
+                <div class="edu-title">{{ profile.edu_hsc_institution }}</div>
+                <div class="edu-sub">{{ profile.edu_hsc_degree }}</div>
+                <div class="edu-date">{{ profile.edu_hsc_period }} · GPA {{ profile.edu_hsc_gpa }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: photo card -->
+        <div class="reveal reveal-delay-1">
+          <div class="about-card">
+            <img src="{% static 'images/mee.jpg' %}" alt="{{ profile.name }}" class="about-photo" loading="lazy" />
+            <div class="about-card-stats">
+              <div class="stat-mini">
+                <span class="stat-mini-num" style="color:var(--accent-light)">{{ profile.cgpa }}</span>
+                <span class="stat-mini-label">CGPA</span>
+              </div>
+              <div class="stat-mini">
+                <span class="stat-mini-num">{{ profile.papers_count }}</span>
+                <span class="stat-mini-label">Papers</span>
+              </div>
+              <div class="stat-mini" style="grid-column:span 2;">
+                <span class="stat-mini-num" style="font-size:18px">{{ profile.edu_current_institution }}</span>
+                <span class="stat-mini-label">Current Institution</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PUBLICATIONS ══ -->
+  <section id="publications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Research Output</span>
+        <h2 class="section-title">Publications</h2>
+        <p class="section-desc">Accepted, under review, and ongoing research across ML, AI, socio-economics, and computer vision.</p>
+      </div>
+
+      <div class="pub-tabs reveal">
+        <button class="pub-tab active" id="tab-accepted" aria-controls="list-accepted">Accepted <span style="color:var(--green);margin-left:4px">●</span></button>
+        <button class="pub-tab" id="tab-review" aria-controls="list-review">Under Review</button>
+        <button class="pub-tab" id="tab-ongoing" aria-controls="list-ongoing">Ongoing</button>
+      </div>
+
+      <!-- Accepted -->
+      <div class="pub-list active" id="list-accepted">
+        {% for pub in accepted_pubs %}
+        <article class="pub-card reveal {% if not forloop.first %}reveal-delay-{{ forloop.counter0|divisibleby:3|yesno:'0,' }}{% endif %}">
+          <div class="pub-index">{{ pub.display_index }}</div>
+          <div class="pub-content">
+            <div class="pub-meta">
+              <span class="pub-badge accepted">Accepted</span>
+              {% if pub.venue %}<span class="pub-venue">{{ pub.venue }}</span>{% endif %}
+            </div>
+            <h3 class="pub-title">{{ pub.title }}</h3>
+            <p class="pub-authors">{{ pub.authors|safe }}</p>
+            {% if pub.bibtex_key %}
+            <button class="pub-cite-btn" onclick="copyBib('{{ pub.bibtex_key }}')" aria-label="Copy BibTeX citation">⧉ Cite (BibTeX)</button>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- Under Review -->
+      <div class="pub-list" id="list-review">
+        {% for pub in review_pubs %}
+        <article class="pub-card reveal">
+          <div class="pub-index">{{ pub.display_index }}</div>
+          <div class="pub-content">
+            <div class="pub-meta">
+              <span class="pub-badge review">Under Review</span>
+              {% if pub.venue %}<span class="pub-venue">{{ pub.venue }}</span>{% endif %}
+            </div>
+            <h3 class="pub-title">{{ pub.title }}</h3>
+            <p class="pub-authors">{{ pub.authors|safe }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- Ongoing -->
+      <div class="pub-list" id="list-ongoing">
+        {% for pub in ongoing_pubs %}
+        <article class="pub-card reveal">
+          <div class="pub-index">{{ pub.display_index }}</div>
+          <div class="pub-content">
+            <div class="pub-meta">
+              <span class="pub-badge ongoing">Ongoing</span>
+            </div>
+            <h3 class="pub-title">{{ pub.title }}</h3>
+            <p class="pub-authors">{{ pub.authors|safe }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS ══ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Built &amp; Deployed</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">Research prototypes and engineering systems spanning ML, CV, and full-stack development.</p>
+      </div>
+
+      <div class="bento-grid">
+        {% for project in projects %}
+        <a href="{{ project.url }}" target="_blank" rel="noopener"
+          class="bento-cell {% if project.layout == 'featured' %}featured{% elif project.layout == 'handbook' %}handbook{% endif %} reveal"
+          id="project-{{ project.pk }}-link">
+          <div class="bento-arrow" aria-hidden="true">↗</div>
+          {% if project.badge_type != 'none' %}
+          <div class="bento-badge {{ project.badge_type }}">{{ project.get_badge_display_label }}</div>
+          {% endif %}
+          {% if project.icon_emoji %}
+          <div class="bento-icon" aria-hidden="true">{{ project.icon_emoji }}</div>
+          {% endif %}
+          <h3 class="bento-title">{{ project.title }}</h3>
+          <p class="bento-desc">{{ project.description }}</p>
+          {% if project.tags %}
+          <div class="bento-tags">
+            {% for tag in project.get_tags_list %}
+            <span class="bento-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS MARQUEE ══ -->
+  <section id="skills" aria-label="Technical skills">
+    <p class="skills-eyebrow">Technical Stack</p>
+    <div style="overflow:hidden;">
+      <div class="marquee-track">
+        {% for skill in skills_row1 %}
+        <span class="skill-pill {% if skill.is_highlighted %}hl{% endif %}">{{ skill.name }}</span>
+        {% endfor %}
+        <!-- Duplicate for seamless loop -->
+        {% for skill in skills_row1 %}
+        <span class="skill-pill {% if skill.is_highlighted %}hl{% endif %}">{{ skill.name }}</span>
+        {% endfor %}
+      </div>
+      <div class="marquee-track reverse">
+        {% for skill in skills_row2 %}
+        <span class="skill-pill {% if skill.is_highlighted %}hl{% endif %}">{{ skill.name }}</span>
+        {% endfor %}
+        <!-- Duplicate -->
+        {% for skill in skills_row2 %}
+        <span class="skill-pill {% if skill.is_highlighted %}hl{% endif %}">{{ skill.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ LEADERSHIP & AWARDS ══ -->
+  <section id="leadership">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Recognition &amp; Service</span>
+        <h2 class="section-title">Awards &amp; Leadership</h2>
+      </div>
+
+      <div class="leadership-grid">
+        <!-- Featured Award -->
+        {% if featured_award %}
+        <div class="leader-card featured reveal" id="nasa-card">
+          <div class="award-icon" aria-hidden="true">{{ featured_award.icon_emoji }}</div>
+          <div>
+            <div class="award-eyebrow">{{ featured_award.eyebrow }}</div>
+            <h3 class="award-title">{{ featured_award.title }}</h3>
+            <p class="award-desc">{{ featured_award.description }}</p>
+            {% if featured_award.tags %}
+            <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+              {% for tag in featured_award.get_tags_list %}
+              <span class="tag {% if forloop.first %}accent-tag{% endif %}">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        <!-- Leadership Roles -->
+        <div class="leader-card reveal" id="leadership-card">
+          <div style="font-size:11px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:24px;">Leadership Roles</div>
+          <ul class="leader-list">
+            {% for role in leadership_roles %}
+            <li>
+              <div style="width:8px;height:8px;border-radius:50%;background:{% if role.is_current %}var(--accent){% else %}var(--text-3){% endif %};margin-top:4px;flex-shrink:0;"></div>
+              <div>
+                <div class="leader-role">{{ role.role }}</div>
+                <div class="leader-org">{{ role.organization }}</div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="status-badge">Open for Collaborations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="section-header reveal" style="margin-bottom:32px;">
+          <span class="section-eyebrow">Get in Touch</span>
+        </div>
+        <div class="hero-badge reveal" style="margin: 0 auto 32px;">
+          <span class="dot" aria-hidden="true"></span>
+          {{ profile.availability_text }}
+        </div>
+        <h2 class="contact-headline reveal">{{ profile.contact_headline|linebreaksbr }}</h2>
+        <p class="contact-sub reveal reveal-delay-1">{{ profile.contact_sub }}</p>
+        <a href="mailto:{{ profile.email }}" class="contact-email reveal reveal-delay-2"
+          id="email-link">{{ profile.email }}</a>
+        <div class="social-links reveal reveal-delay-3">
+          <a href="{{ profile.linkedin_url }}" target="_blank" rel="noopener" class="social-link" id="linkedin-link">LinkedIn ↗</a>
+          <a href="{{ profile.github_url }}" target="_blank" rel="noopener" class="social-link" id="github-link">GitHub ↗</a>
+          <a href="{{ profile.orcid_url }}" target="_blank" rel="noopener" class="social-link" id="orcid-link">ORCID ↗</a>
+          <a href="{{ profile.facebook_url }}" target="_blank" rel="noopener" class="social-link" id="facebook-link">Facebook ↗</a>
+          <a href="{% static 'mehedi-contact.vcf' %}" download class="social-link" id="vcard-link">↓ vCard</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">{{ profile.name }} · © 2026 · AI Researcher · <a href="{{ profile.canonical_url }}" style="color:inherit;text-decoration:none;" id="site-url">mdmehedihasan.us</a></p>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Back to top -->
+  <a href="#" id="back-top" aria-label="Back to top">↑</a>
+
+  <!-- BibTeX data injected from Django -->
+  <script>
+    const bibEntries = {
+      {% for key, entry in bib_entries.items %}
+      {{ key|safe }}: `{{ entry|escapejs }}`,
+      {% endfor %}
+    };
+  </script>
+
+  <script src="{% static 'js/portfolio.js' %}"></script>
+</body>
+
+</html>
