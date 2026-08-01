@@ -256,6 +256,36 @@
   },
   {
     "model": "core.publication",
+    "pk": 24,
+    "fields": {
+      "title": "Gender Based Predictive Persistence in Computer Science Education: A Disaggregated SHAP Analysis, Gender Moderated SEM and Policy Interventions in Bangladesh",
+      "authors": "Molla, M. A., <span class=\"me\">Hasan, M. M.</span>, Rakib, R., Pallob, M. M. I., Borhan, R., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R13", "bibtex_key": "", "order": 13, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 25,
+    "fields": {
+      "title": "Uncovering Socioeconomic Archetypes in Bangladeshi CS Undergraduates: K-Modes Clustering, Latent Class SEM and Targeted Archetype Policy Simulations",
+      "authors": "<span class=\"me\">Hasan, M. M.</span>, Molla, M. A., Rakib, R., Pallob, M. M. I., Borhan, R., Based, M. A.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R14", "bibtex_key": "", "order": 14, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
+    "pk": 26,
+    "fields": {
+      "title": "Toward an AI-Assisted Dyslexia Detection Framework for Bangla-Speaking Children: A Cross-Linguistic Conceptual Model Integrating Analytically Transparent Bayesian Attribution and Orthographic Complexity",
+      "authors": "Ray, D. D., <span class=\"me\">Hasan, M. M.</span>, Ausaf, S. M. N., Based, M. A., Rahman, M. M.",
+      "venue": "", "year": null, "status": "review",
+      "display_index": "R15", "bibtex_key": "", "order": 15, "bibtex_entry": ""
+    }
+  },
+  {
+    "model": "core.publication",
     "pk": 21,
     "fields": {
       "title": "Women's Psychology and Its Socioeconomic Impact on Male Partners and Relationships",
