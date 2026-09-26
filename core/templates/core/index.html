@@ -58,6 +58,7 @@
         "sameAs": [
           "https://www.linkedin.com/in/meetmehedi",
           "https://github.com/meetmehedi",
+          "https://www.kaggle.com/meetmehedi",
           "https://orcid.org/0009-0006-1427-8769"
         ],
         "worksFor": {
@@ -108,7 +109,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
@@ -660,26 +661,29 @@
 
   </div>
 
-  <!-- NAV -->
+  <!-- NAV (FLOATING FROSTED GLASS BAR) -->
   <nav id="nav">
-    <div class="term-chrome">
-      <div class="term-titlebar">
-        <div class="term-dots"><span></span><span></span><span></span></div>
-        <span>mehedi@research:~$</span>
-        <div class="nav-right">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <span class="toggle-icon" id="iconSun">☀️</span>
-            <span class="toggle-icon" id="iconMoon">🌙</span>
-          </button>
-          <button class="nav-menu-btn" id="menuToggle">menu</button>
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="nav-logo">MH</div>
+        <div class="nav-status-badge">
+          <span class="status-dot"></span>
+          <span>Available</span>
         </div>
-      </div>
+      </a>
       <div class="nav-links" id="navLinks">
-        <a href="#about" class="nav-link">about</a>
-        <a href="#publications" class="nav-link">research</a>
-        <a href="#projects" class="nav-link">projects</a>
-        <a href="#leadership" class="nav-link">awards</a>
-        <a href="#contact" class="nav-link">contact</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#publications" class="nav-link">Research</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#leadership" class="nav-link">Awards</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon active" id="iconSun">☀️</span>
+          <span class="toggle-icon" id="iconMoon">🌙</span>
+        </button>
+        <button class="nav-menu-btn" id="menuToggle" aria-label="Toggle navigation">☰</button>
       </div>
     </div>
   </nav>
@@ -688,62 +692,60 @@
   <section id="hero">
     <div class="hero-inner">
 
-      <!-- LEFT: terminal card -->
-      <div class="hero-term reveal visible">
-        <div class="hero-term-bar" style="justify-content:space-between;">
-          <span style="display:flex;align-items:center;gap:8px;">
-            <div class="term-dots"><span></span><span></span><span></span></div>
-            &nbsp; whoami.sh
-          </span>
-          <span style="font-size:10px;color:var(--text-3);">mehedi@research:~$</span>
+      <!-- LEFT: Hero Content -->
+      <div class="hero-content reveal visible">
+        <div class="hero-badge-pill">
+          <span class="badge-sparkle">✦</span>
+          <span>AI &amp; ML Researcher</span>
+          <span style="color:var(--border);">|</span>
+          <span class="badge-tag-text">NASA Space Apps '25 Finalist</span>
         </div>
-        <div class="hero-term-body">
-          <div class="prompt-row"><span class="prompt-user">mehedi@research</span><span>:~$</span><span>whoami</span>
+
+        <h1 class="hero-name" id="typeName">Md. Mehedi Hasan</h1>
+        <div class="hero-sub" id="typeRole">AI &amp; ML Researcher · NASA Space Apps Barisal Regional Champion · IEEE Member</div>
+        <p class="hero-tagline">
+          Engineering interpretable machine learning systems at the intersection of behavioral modeling,
+          social engineering anomaly detection, and socio-technical resilience.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#publications" class="btn-primary">Explore Research ↗</a>
+          <a href="{% static 'Md_Mehedi_Hasan_CV.pdf' %}" download class="btn-secondary">Download CV (PDF)</a>
+          <a href="https://orcid.org/0009-0006-1427-8769" target="_blank" rel="noopener" class="btn-secondary">ORCID: 0009-0006-1427-8769 ↗</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num accent">3.76</span>
+            <span class="hero-stat-label">CGPA / 4.00</span>
           </div>
-          <h1 class="hero-name" id="typeName"><span class="caret"></span></h1>
-          <div class="hero-sub" id="typeRole"></div>
-          <p class="hero-tagline"><span class="comment">// mission</span><br>
-            Building interpretable machine learning systems at the intersection of behavioral modeling,
-            social engineering detection, and socio-technical resilience.
-          </p>
-          <div class="hero-buttons">
-            <a href="#publications" class="btn-primary">./view_research.sh</a>
-            <a href="{% static 'Md_Mehedi_Hasan_CV.pdf' %}" download class="btn-secondary">↓ download_cv.pdf</a>
-            <a href="https://orcid.org/0009-0006-1427-8769" target="_blank" rel="noopener" class="btn-secondary">orcid
-              ↗</a>
+          <div class="hero-stat">
+            <span class="hero-stat-num">11+</span>
+            <span class="hero-stat-label">Accepted Papers</span>
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat"><span class="hero-stat-num accent">3.76</span><span class="hero-stat-label">CGPA /
-                4.00</span></div>
-            <div class="hero-stat"><span class="hero-stat-num">11+</span><span class="hero-stat-label">Accepted
-                Papers</span></div>
-            <div class="hero-stat"><span class="hero-stat-num">🏆</span><span class="hero-stat-label">NASA Apps · 3
-                Honors</span></div>
-            <div class="hero-stat"><span class="hero-stat-num">29</span><span class="hero-stat-label">Research
-                Works</span></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num" style="color:var(--amber);">🏆 3</span>
+            <span class="hero-stat-label">NASA Apps Honors</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">29</span>
+            <span class="hero-stat-label">Research Works</span>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT: portrait photo with scan animation -->
+      <!-- RIGHT: Portrait photo with spotlight frame -->
       <div class="hero-photo-col reveal visible">
         <div class="hero-photo-wrap">
           <div class="hero-photo-frame">
             <img src="{% static 'images/mee.jpg' %}" alt="Md. Mehedi Hasan — AI &amp; ML Researcher"
-              onerror="this.style.background='var(--surface-3)';">
-            <div class="scan-line"></div>
-            <div class="scan-grid"></div>
+              onerror="this.style.background='var(--bg-card-solid)';">
           </div>
-          <span class="corner-tr"></span>
-          <span class="corner-bl"></span>
-          <!-- Floating Tags -->
+          <!-- Floating Glass Tags -->
           <div class="skill-tag-float tag-ai"><span class="dot"></span> AI/ML Research</div>
           <div class="skill-tag-float tag-sem"><span class="dot"></span> SEM Modeling</div>
           <div class="skill-tag-float tag-cpc"><span class="dot"></span> President DIU CPC</div>
           <div class="skill-tag-float tag-xai"><span class="dot"></span> Explainable AI</div>
-          <div class="skill-tag-float tag-beh"><span class="dot"></span> Behavioral Modeling</div>
-          <!-- End Floating Tags -->
-
         </div>
       </div>
 
@@ -756,7 +758,7 @@
       <div class="about-grid">
         <div>
           <div class="section-header reveal">
-            <div class="cmd-line"><span class="p">$</span> cat about.md</div>
+            <div class="cmd-line"><span class="p">✦</span> Research Profile</div>
             <h2 class="section-title">Turning Behavior Into Intelligence</h2>
           </div>
 
@@ -863,11 +865,10 @@
             </div>
           </div>
         </div>
-      </div>
 
       <div class="reveal reveal-delay-1">
         <div class="side-card">
-          <div class="side-card-title top">$ cat education.log</div>
+          <div class="side-card-title top">✦ Education</div>
           <div class="edu-item">
             <div class="edu-title">Dhaka International University</div>
             <div class="edu-sub">B.Sc. Computer Science &amp; Engineering</div>
@@ -881,7 +882,7 @@
         </div>
 
         <div class="side-card">
-          <div class="side-card-title top">$ stat --profile</div>
+          <div class="side-card-title top">✦ Key Metrics</div>
           <div class="mini-stats">
             <div class="mini-stat"><span class="mini-stat-num">3.76</span><span class="mini-stat-label">CGPA</span>
             </div>
@@ -895,7 +896,7 @@
         </div>
 
         <div class="side-card">
-          <div class="side-card-title top">$ cat affiliations.txt</div>
+          <div class="side-card-title top">✦ Affiliations</div>
           <div style="font-size:12px;color:var(--text-2);line-height:2;">
             IEEE — Student Member <span style="color:var(--text-3)">(thru Dec 2026)</span><br>
             IEEE Computer Society — Student Member<br>
@@ -904,7 +905,7 @@
         </div>
 
         <div class="side-card">
-          <div class="side-card-title top">$ cat experience.log</div>
+          <div class="side-card-title top">✦ Experience</div>
           <div class="edu-item">
             <div class="edu-title">Instructor</div>
             <div class="edu-sub">Python, Data Science &amp; Machine Learning Course</div>
@@ -917,23 +918,22 @@
         </div>
       </div>
     </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- PUBLICATIONS -->
   <section id="publications">
     <div class="container">
       <div class="section-header reveal">
-        <div class="cmd-line"><span class="p">$</span> ls publications/ --sort=status</div>
-        <h2 class="section-title">Publications</h2>
-        <p class="section-desc">Accepted, under review, and ongoing research across ML, AI, socio-economics, and
-          computer vision.</p>
+        <div class="cmd-line"><span class="p">✦</span> Peer-Reviewed Publications</div>
+        <h2 class="section-title">Research Publications</h2>
+        <p class="section-desc">Accepted, under review, and ongoing research across ML, behavioral anomaly modeling, and socio-technical resilience.</p>
       </div>
 
       <div class="pub-tabs reveal">
-        <button class="pub-tab active" id="tab-accepted">accepted (11)</button>
-        <button class="pub-tab" id="tab-review">under_review (14)</button>
-        <button class="pub-tab" id="tab-ongoing">ongoing (4)</button>
+        <button class="pub-tab active" id="tab-accepted">Accepted (11)</button>
+        <button class="pub-tab" id="tab-review">Under Review (14)</button>
+        <button class="pub-tab" id="tab-ongoing">Ongoing Works (4)</button>
       </div>
 
       <div class="pub-list active" id="list-accepted">
@@ -1307,10 +1307,9 @@
   <section id="projects">
     <div class="container">
       <div class="section-header reveal">
-        <div class="cmd-line"><span class="p">$</span> ls -la ~/projects</div>
-        <h2 class="section-title">Projects</h2>
-        <p class="section-desc">Research prototypes and engineering systems spanning ML, CV, and full-stack development.
-        </p>
+        <div class="cmd-line"><span class="p">✦</span> Systems &amp; Engineering</div>
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-desc">Research prototypes and production systems spanning machine learning, computer vision, and socio-technical tooling.</p>
       </div>
 
       <div class="bento-grid">
@@ -1576,16 +1575,29 @@
           </div>
         </a>
 
-        <a href="https://github.com/meetmehedi/murnitin" target="_blank" rel="noopener"
-          class="bento-cell reveal reveal-delay-2">
-          <div class="bento-arrow">↗</div>
-          <div class="bento-badge nasa">🌐 LIVE · murnitin.vercel.app</div>
+        <div class="bento-cell reveal reveal-delay-2" style="cursor:default;">
+          <div class="bento-badge nasa">🌐 LIVE · murnitin.onrender.com</div>
           <div class="bento-icon">🧩</div>
           <h3 class="bento-title">murnitin</h3>
-          <p class="bento-desc">Python-based intelligent system with live deployment on Vercel. 2★ on GitHub.
+          <p class="bento-desc">Python-based intelligent system with live deployment on Render. 2★ on GitHub.
             Incorporates ML pipelines and an API-driven backend for real-world research-grade inference.</p>
           <div class="bento-tags"><span class="bento-tag">Python</span><span class="bento-tag">ML Pipeline</span><span
-              class="bento-tag">Vercel</span></div>
+              class="bento-tag">Render</span></div>
+          <!-- Quick-action links -->
+          <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;">
+            <a href="https://murnitin.onrender.com" target="_blank" rel="noopener"
+              style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:9999px;background:var(--accent-bg);border:1px solid var(--border-accent);color:var(--accent-light);font-size:12px;font-weight:600;text-decoration:none;transition:all .2s;"
+              onmouseover="this.style.background='var(--accent)';this.style.color='#fff';"
+              onmouseout="this.style.background='var(--accent-bg)';this.style.color='var(--accent-light)';">
+              🌐 Live Demo ↗
+            </a>
+            <a href="https://github.com/meetmehedi/murnitin" target="_blank" rel="noopener"
+              style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:9999px;background:rgba(255,255,255,0.04);border:1px solid var(--border);color:var(--text-2);font-size:12px;font-weight:500;text-decoration:none;transition:all .2s;"
+              onmouseover="this.style.borderColor='var(--border-hover)';this.style.color='var(--text-1)';"
+              onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-2)';">
+              ⌥ GitHub Source ↗
+            </a>
+          </div>
           <div class="figure-wrap">
             <p class="figure-label">fig.11 — inference_pipeline.svg</p>
             <div class="figure-svg-container">
@@ -1602,7 +1614,7 @@
               </svg>
             </div>
           </div>
-        </a>
+        </div>
 
         <a href="https://github.com/meetmehedi/AI-Powered-Supplementary-Learning-Platform-for-University-Courses"
           target="_blank" rel="noopener" class="bento-cell reveal reveal-delay-1">
@@ -1715,10 +1727,9 @@
 
     <div class="container">
       <div class="section-header reveal">
-        <div class="cmd-line"><span class="p">$</span> ./list_skills --category=all</div>
+        <div class="cmd-line"><span class="p">✦</span> Core Competencies &amp; Ecosystem</div>
         <h2 class="section-title">Skills &amp; Technical Ecosystem</h2>
-        <p class="section-desc">Novel AI architectures created, programming languages, ML/DL frameworks, and engineering
-          tools.</p>
+        <p class="section-desc">Novel AI architectures created, programming languages, ML/DL frameworks, and engineering tools.</p>
       </div>
 
       <div
@@ -1853,7 +1864,7 @@
   <section id="leadership">
     <div class="container">
       <div class="section-header reveal">
-        <div class="cmd-line"><span class="p">$</span> cat awards.log leadership.log</div>
+        <div class="cmd-line"><span class="p">✦</span> Honors &amp; Leadership</div>
         <h2 class="section-title">Awards &amp; Leadership</h2>
       </div>
 
@@ -1926,11 +1937,10 @@
           <div class="side-card-title top">$ cat achievements.log</div>
           <div class="achv-grid">
             <div class="achv-item"><b>Fibonacci International Robot &amp; STEAM Olympiad 2026</b> · Finalist · 8th Place · 10th Among Universities (Qualifying Round) · Line Following Robot · DIU_Rocket Squad</div>
-            <div class="achv-item"><b>NASA International Space Apps Regional Champion, Global Nominee and Honorable
-                mention at global finalist</div>
-            <div class="achv-item"><b>National Data Analytics Competition 2025</b>Participant</div>
-            <div class="achv-item"><b>Eastern Bank PLC Technovation'25</b>National Hackathon · Participant</div>
-            <div class="achv-item"><b>BUET CSE FEST 2026</b>National Hackathon · Participant</div>
+            <div class="achv-item"><b>NASA International Space Apps Challenge 2025</b> · Regional Champion · Global Nominee · Honorable Mention at Global Finalist · Team Polaris</div>
+            <div class="achv-item"><b>National Data Analytics Competition 2025</b> · Participant</div>
+            <div class="achv-item"><b>Eastern Bank PLC Technovation'25</b> · National Hackathon · Participant</div>
+            <div class="achv-item"><b>BUET CSE FEST 2026</b> · National Hackathon · Participant</div>
           </div>
         </div>
       </div>
@@ -1942,7 +1952,7 @@
     <div class="container">
       <div class="contact-grid">
         <div class="reveal">
-          <div class="cmd-line"><span class="p">$</span> ./contact --open</div>
+          <div class="cmd-line"><span class="p">✦</span> Initiate Collaboration</div>
           <h2 class="contact-headline">Let's Shape<br>the Future</h2>
           <p class="contact-sub">Open for research collaborations, engineering challenges, or just a friendly
             conversation about AI and its impact on humanity.</p>
@@ -1961,6 +1971,7 @@
             <a href="https://www.linkedin.com/in/meetmehedi" target="_blank" rel="noopener" class="social-link">LinkedIn
               ↗</a>
             <a href="https://github.com/meetmehedi" target="_blank" rel="noopener" class="social-link">GitHub ↗</a>
+            <a href="https://www.kaggle.com/meetmehedi" target="_blank" rel="noopener" class="social-link">Kaggle ↗</a>
             <a href="https://orcid.org/0009-0006-1427-8769" target="_blank" rel="noopener" class="social-link">ORCID
               ↗</a>
             <a href="https://www.facebook.com/meetmehedi1/" target="_blank" rel="noopener" class="social-link">Facebook
@@ -1993,7 +2004,7 @@
                 <label class="form-label"><span class="p">--</span>message</label>
                 <textarea class="form-textarea" id="cf-message" required placeholder="Tell me about it..."></textarea>
               </div>
-              <button type="submit" class="form-submit">./send_message.sh --to=mehedi</button>
+              <button type="submit" class="form-submit">Send Message ↗</button>
               <p class="form-note">Opens your email client with the message pre-filled</p>
             </form>
           </div>
